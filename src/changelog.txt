@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.100.0
+Date: 04. 02. 2021
+  Bugfixes:
+    - Used the proper method to clear the player's inventory which should be much more reliable and shoudn't affect game modes other than freeplay anymore.
+---------------------------------------------------------------------------------------------------
 Version: 1.100.3
 Date: 04. 02. 2021
   Update:

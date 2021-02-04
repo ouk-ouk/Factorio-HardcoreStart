@@ -1,11 +1,11 @@
 {
     "name": "HardcoreStart",
-    "version": "1.100.3",
+    "version": "2.100.0",
     "title": "Hardcore Start",
     "author": "<NO_NAME>",
     "contact": "",
     "homepage": "",
     "factorio_version": "1.0",
-    "dependencies": ["base >= 1.0", "NoRespawnGun >= 1.100.4"],
+    "dependencies": ["base >= 1.0", "NoRespawnGun >= 2.100.0"],
     "description": "Start a new game without any items in your inventory."
 }
