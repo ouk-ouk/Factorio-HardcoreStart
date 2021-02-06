@@ -1,11 +1,11 @@
 {
     "name": "HardcoreStart",
-    "version": "3.100.0",
+    "version": "4.100.0",
     "title": "Hardcore Start",
     "author": "<NO_NAME>",
     "contact": "",
     "homepage": "",
     "factorio_version": "1.0",
-    "dependencies": ["base >= 1.0", "NoRespawnGun >= 3.100.0"],
-    "description": "Start a new game without any items in your inventory. (Possible to configure to remove only weapons.)"
+    "dependencies": ["base >= 1.0", "!NoRespawnGun"],
+    "description": "Removes the default items in from player's inventory on spawn/respawn. (Possible to configure to remove only weapons.)\n\nBefore disabling/removing this mod, restore the default items on all your saves. (Load the save, change mod settings and save again.)"
 }

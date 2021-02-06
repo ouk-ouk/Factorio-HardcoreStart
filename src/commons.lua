@@ -1,11 +1,12 @@
 modName = "HardcoreStart"
 
-spawnItemsSetting_nothing = "nothing"
-spawnItemsSetting_noWeapons = "noWeapons"
-spawnItemsSetting_everything = "everything"
+itemsSetting_nothing = "nothing"
+itemsSetting_noWeapons = "noWeapons"
+itemsSetting_everything = "everything"
 
-spawnItemsSettingValues = {spawnItemsSetting_nothing, spawnItemsSetting_noWeapons, spawnItemsSetting_everything}
-defaultSpawnItemsSettingValue = spawnItemsSetting_nothing
+itemsSettingValues = {itemsSetting_nothing, itemsSetting_noWeapons, itemsSetting_everything}
+defaultItemsSettingValue = itemsSetting_nothing
 
 local settingNamePrefix = modName .. "-"
 spawnItemsSettingName = settingNamePrefix .. "spawnItems"
+respawnItemsSettingName = settingNamePrefix .. "respawnItems"

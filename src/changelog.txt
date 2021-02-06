@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 4.100.0
+Date: 6. 02. 2021
+  Features:
+    - Merged functionality of "Hardcore Start" and "No Respawn Gun". This mod takes over the functions of "No Respawn Gun".
+    - Added options to set items that player will get on respawn. (Because of the above.)
+---------------------------------------------------------------------------------------------------
 Version: 3.100.0
 Date: 6. 02. 2021
   Features:
