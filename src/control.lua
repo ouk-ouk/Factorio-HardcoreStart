@@ -32,12 +32,13 @@ local function setItems(settingValue, getRemovedItems, setRemovedItems, getKeptI
 	--log("Setting value: " .. settingValue)
 	if settingValue == itemsSetting_nothing then
 		keptItems = {}
-	elseif settingValue == itemsSetting_noWeapons then
+	elseif settingValue == itemsSetting_onlyWeapons or settingValue == itemsSetting_noWeapons then
+		local keepWeapons = settingValue == itemsSetting_onlyWeapons
 		keptItems = {}
 		for itemName, amount in pairs(removedItems) do
 			local itemType = game.item_prototypes[itemName].type
 			local isWeapon = itemType == "gun" or itemType == "ammo"
-			if not isWeapon then
+			if isWeapon == keepWeapons then
 				keptItems[itemName] = amount
 			end
 		end
