@@ -36,7 +36,7 @@ local function setItems(settingValue, getRemovedItems, setRemovedItems, getKeptI
 		local keepWeapons = settingValue == itemsSetting_onlyWeapons
 		keptItems = {}
 		for itemName, amount in pairs(removedItems) do
-			local itemType = game.item_prototypes[itemName].type
+			local itemType = prototypes.item[itemName].type
 			local isWeapon = itemType == "gun" or itemType == "ammo"
 			if isWeapon == keepWeapons then
 				keptItems[itemName] = amount
@@ -58,14 +58,14 @@ end
 local function setSpawnItems()
 	if remote.interfaces.freeplay and remote.interfaces.freeplay.get_created_items and remote.interfaces.freeplay.set_created_items then
 		--log("Set spawn items")
-		if global.removedSpawnItems == nil then
-			global.removedSpawnItems = {}
+		if storage.removedSpawnItems == nil then
+			storage.removedSpawnItems = {}
 		end
 		local settingValue = settings.global[spawnItemsSettingName].value
 		setItems(
 			settingValue,
-			function() return global.removedSpawnItems end,
-			function(newItems) global.removedSpawnItems = newItems end,
+			function() return storage.removedSpawnItems end,
+			function(newItems) storage.removedSpawnItems = newItems end,
 			function() return remote.call("freeplay", "get_created_items") end,
 			function(newItems) remote.call("freeplay", "set_created_items", newItems) end
 		)
@@ -75,14 +75,14 @@ end
 local function setRespawnItems()
 	if remote.interfaces.freeplay and remote.interfaces.freeplay.get_respawn_items and remote.interfaces.freeplay.set_respawn_items then
 		--log("Set respawn items")
-		if global.removedRespawnItems == nil then
-			global.removedRespawnItems = {}
+		if storage.removedRespawnItems == nil then
+			storage.removedRespawnItems = {}
 		end
 		local settingValue = settings.global[respawnItemsSettingName].value
 		setItems(
 			settingValue,
-			function() return global.removedRespawnItems end,
-			function(newItems) global.removedRespawnItems = newItems end,
+			function() return storage.removedRespawnItems end,
+			function(newItems) storage.removedRespawnItems = newItems end,
 			function() return remote.call("freeplay", "get_respawn_items") end,
 			function(newItems) remote.call("freeplay", "set_respawn_items", newItems) end
 		)
